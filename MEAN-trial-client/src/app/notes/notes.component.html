@@ -1,0 +1,27 @@
+<div class="example-container">
+  <mat-form-field appearance="legacy">
+    <input matInput [(ngModel)]="titleModel" placeholder="Title">
+  </mat-form-field>
+  <br>
+  <br>
+  <mat-form-field appearance="legacy">
+    <input matInput [(ngModel)]="descriptionModel" placeholder="Enter your content">
+  </mat-form-field>
+  <br>
+  <br>
+  <mat-form-field>
+    <select matNativeControl [(ngModel)]="statusModel" (change)="setStatus($event.target.value)">
+      <option value="completed">Completed</option>
+      <option value="incomplete">Incomplete</option>
+    </select>
+  </mat-form-field>
+</div>
+<br>
+<button mat-raised-button color="accent" (click)="createNote()"> Add Note</button>
+<hr>
+<div *ngIf="notes">
+  <p *ngFor="let note of notes" >
+    <mat-card-title> {{ note.title }} </mat-card-title>
+    <mat-card> {{ note.description }} </mat-card>
+    <mat-card> {{ note.status }} </mat-card>
+</div>
