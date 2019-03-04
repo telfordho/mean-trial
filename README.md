@@ -8,7 +8,7 @@ Make sure you have `cd mean-trial` as the following instruction are starting in 
 1. start mongodb server, make sure the mongodb is running
 2. `cd MEAN-trial-server`
 3. `npm i` 
-4. `npm start`, make sure the node is running in port 3000
+4. `npm start`, make sure the node is running on port 3000
 
 ## run development server (Angular)
 1. `cd MEAN-trial-client`
