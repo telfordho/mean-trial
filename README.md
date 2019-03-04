@@ -1,7 +1,7 @@
 # MEAN-trial
 
 Please clone the repository to try this project.
-Make sure you have `cd MEAN-trial` as the following instruction are starting in 'MEAN-trial' folder.
+Make sure you have `cd mean-trial` as the following instruction are starting in 'mean-trial' folder.
 
 ## run backend server
 
