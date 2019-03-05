@@ -4,6 +4,7 @@ import { UserComponent } from './user/user.component'
 import { NotesComponent } from './notes/notes.component'
 
 const routes: Routes = [
+  { path: '', redirectTo: 'user', pathMatch: 'full' },
   { path: 'user', component:  UserComponent},
   { path: 'note', component:  NotesComponent}
 ];

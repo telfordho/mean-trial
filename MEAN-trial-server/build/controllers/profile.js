@@ -41,7 +41,6 @@ var getProfile = exports.getProfile = function getProfile(req, res) {
 };
 
 var updateProfile = exports.updateProfile = function updateProfile(req, res) {
-  console.log(req.body);
   User.findOneAndUpdate({
     _id: req.body.id
   }, {
