@@ -12,6 +12,5 @@ Make sure you have `cd mean-trial` as the following instruction are starting in 
 
 ## run development server (Angular)
 1. `cd MEAN-trial-client`
-2. `npm i`
-3. `npm start`
+2. `npm start`
 
