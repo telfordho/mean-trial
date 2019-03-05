@@ -9,7 +9,7 @@
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
             </mat-form-field>
           </td>
         </tr>
@@ -22,6 +22,6 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button (click)="login()" color="primary">Login</button>
-    <button mat-raised-button (click)="login()" color="secondary">Register</button>
+    <button mat-raised-button (click)="register()" color="secondary">Register</button>
   </mat-card-actions>
 </mat-card>

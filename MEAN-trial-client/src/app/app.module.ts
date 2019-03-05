@@ -9,8 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { NotesComponent } from './notes/notes.component';
-import { NotesService } from './notes.service'
-import { AuthService } from './auth.service';
+import { AppService } from './app.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
 
@@ -35,8 +34,7 @@ import { UserComponent } from './user/user.component';
     HttpClientModule
   ],
   providers: [
-    NotesService, 
-    AuthService
+    AppService
   ],
   bootstrap: [AppComponent]
 })

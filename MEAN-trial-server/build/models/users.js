@@ -20,10 +20,6 @@ var userSchema = new _mongoose2.default.Schema({
     unique: true,
     required: true
   },
-  name: {
-    type: String,
-    required: true
-  },
   notes: [{
     title: String,
     description: String,

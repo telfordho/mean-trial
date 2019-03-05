@@ -19,20 +19,3 @@ _mongoose2.default.connection.on('error', function (err) {
 _mongoose2.default.connection.on('disconnected', function () {
   console.log('Mongoose disconnected');
 });
-
-// mongoose.model('User', userSchema).create({
-//   email: 'telfordho@mailmail.com',
-//   name: 'askjdv',
-//   notes: [
-//     {
-//       title: '123',
-//       description: '123',
-//       status: 'completed'
-//     },
-//     {
-//       title: '234',
-//       description: '234',
-//       status: 'completed'
-//     }
-//   ]
-// })

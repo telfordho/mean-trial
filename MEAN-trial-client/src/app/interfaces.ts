@@ -9,3 +9,8 @@ export interface Profile {
     _id: String,
     notes: Note[]
 }
+
+export interface Payload {
+    email: String,
+    password: String
+}

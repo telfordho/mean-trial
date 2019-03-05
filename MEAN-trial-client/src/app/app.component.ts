@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MEAN-trial-client';
+  public location ;
+  constructor(private route: ActivatedRoute) { 
+  }
 }

@@ -2,6 +2,8 @@
   <mat-toolbar-row color="primary">
     <span>Notes</span>
     <span class="spacer"></span>
-    <button class="icon" *ngIf="location=='/note'">Logout</button>
+    <!-- <div *ngIf="location =='/note'"> -->
+      <button class="icon" (click)="logout()">Logout</button>
+    <!-- </div> -->
   </mat-toolbar-row>
 </mat-toolbar>

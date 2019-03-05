@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NotesService } from '../notes.service'
+import { AppService } from '../app.service'
 import { Note, Profile } from '../interfaces'
 
 @Component({
@@ -10,20 +10,24 @@ import { Note, Profile } from '../interfaces'
 
 export class NotesComponent implements OnInit {
 
-  public profile
-  titleModel: String;
-  descriptionModel: String;
-  statusModel: String;
-  notes: Note[];
+  public profile: Profile;
+  public token: string;
+  public id: string;
+  private titleModel: String;
+  private descriptionModel: String;
+  private statusModel: String;
+  private notes: Note[];
 
-  constructor(private notesService: NotesService) {
+  constructor(private appService: AppService) {
+    this.token = localStorage.getItem('mean-token');
+    this.id = this.appService.getIdFromToken(this.token)
     this.titleModel = '';
     this.descriptionModel = '';
     this.statusModel = 'completed';
     this.notes = []
   }
   ngOnInit() {
-    this.notesService.getProfile()
+    this.appService.getProfile(this.id)
       .subscribe(data => {
         this.notes = data.notes
       })
@@ -40,8 +44,8 @@ export class NotesComponent implements OnInit {
       status: this.statusModel
     };
     this.notes.push(newNotes);
+    this.appService.updateNote(this.id, this.notes).subscribe()
     this.titleModel = this.descriptionModel = ''
     this.statusModel = 'completed';
   }
-
 }
